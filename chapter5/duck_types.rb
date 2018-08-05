@@ -90,19 +90,3 @@ end
 # kind_of?
 # is_a?
 # responds_to?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
