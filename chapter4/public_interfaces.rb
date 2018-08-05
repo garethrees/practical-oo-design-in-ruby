@@ -77,6 +77,6 @@ class Mechanic
 
 end
 
-trip = Trip.new(mechanic: Mechanic.new, bicycles: Bicycles.all)
+trip = Trip.new(mechanic: Mechanic.new, bicycles: Bicycle.all)
 trip.prepare
 
