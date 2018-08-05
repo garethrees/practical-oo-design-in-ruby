@@ -80,3 +80,18 @@ end
 trip = Trip.new(mechanic: Mechanic.new, bicycles: Bicycle.all)
 trip.prepare
 
+# 4.7
+# Multiple preparers
+class Trip
+  attr_reader :preppers, :bicycles
+
+  def prepare
+    preppers.each do |prepper|
+      prepper.prepare_trip(self)
+    end
+  end
+end
+
+prep_team = [Mechanic.new, TourGuide.new, Chef.new]
+trip = Trip.new(preppers: prep_team, bicycles: Bicycle.all)
+trip.prepare
